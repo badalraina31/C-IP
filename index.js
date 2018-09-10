@@ -1,7 +1,7 @@
 const electron = require('electron');
 const { app, Tray, Menu, BrowserWindow } = electron;
 const path = require('path');
-const iconPath = path.join(__dirname, 'icon.png');
+const iconPath = path.join(__dirname, 'iconTemplate@3x.png');
 let appIcon = null;
 let win = null;
 
@@ -13,7 +13,6 @@ var ncp = require("copy-paste");
 app.on('ready', () => {
     publicIp.v4().then(eip => {
         ExternalIP = eip;
-        console.log(ExternalIP);
         win = new BrowserWindow({show: false});
         appIcon = new Tray(iconPath);
         var contextMenu = Menu.buildFromTemplate([

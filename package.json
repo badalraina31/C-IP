@@ -4,6 +4,7 @@
     "description": "Copy your WLAN and Public IP from your taskbar.",
     "main": "index.js",
     "scripts": {
+        "start": "electron .",
         "electron-toolkit": "electron ./node_modules/electron-toolkit",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
