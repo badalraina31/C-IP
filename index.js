@@ -28,6 +28,7 @@ app.on('ready', () => {
                 ncp.copy(ExternalIP);
                 }
             },
+            {type: 'separator'},
             { label: 'Quit',
             accelerator: 'CommandOrControl+Q',
             selector: 'terminate:',
