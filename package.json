@@ -19,7 +19,7 @@
         "public-ip": "^2.4.0"
     },
     "devDependencies": {
-        "electron-builder": "^20.29.0",
+        "electron-builder": "^20.31.2",
         "electron": "^3.0.7",
         "electron-toolkit": "^1.0.24"
     },
