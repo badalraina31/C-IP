@@ -19,18 +19,18 @@
         "public-ip": "^3.0.0"
     },
     "devDependencies": {
-        "electron-builder": "^20.38.4",
         "electron": "^4.0.1",
+        "electron-builder": "^20.38.4",
         "electron-toolkit": "^1.0.24"
     },
     "build": {
         "appId": "com.electron.ipvis",
-        "copyright": "Copyright © 2018 ",
-        "productName": "C-IP",
-        "electronVersion": "2.0.9",
+        "copyright": "Copyright © 2019 ",
+        "productName": "ipvis",
+        "electronVersion": "4.0.1",
         "asar": true,
         "directories": {
-            "app": "C:\\Users\\Liam\\Documents\\GitHub\\C-IP",
+            "app": "C:\\Users\\Liam\\Documents\\Development\\NodeJS\\C-IP",
             "output": "dist"
         },
         "win": {
