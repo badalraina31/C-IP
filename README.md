@@ -13,6 +13,10 @@ You can download this repository and then run
 npm install
 node index.js
 ```
+## How to Run
+```
+npm start
+```
 
 ## Contribution Guidelines
 Pull Requests are welcome, for any major changes/ feature requests / updates please first open a issue.
