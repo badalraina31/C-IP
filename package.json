@@ -1,7 +1,7 @@
 {
     "name": "ipvis",
     "version": "1.0.0",
-    "description": "View your WLAN/Public IP without having to use a command line.",
+    "description": "",
     "main": "index.js",
     "scripts": {
         "start": "electron .",
@@ -25,7 +25,7 @@
         "appId": "com.electron.ipvis",
         "copyright": "Copyright © 2019 ",
         "productName": "ipvis",
-        "electronVersion": "4.0.1",
+        "electronVersion": "7.1.2",
         "asar": true,
         "directories": {
             "app": "C:\\Users\\Liam\\Documents\\Development\\NodeJS\\C-IP",
