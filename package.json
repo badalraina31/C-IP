@@ -1,7 +1,7 @@
 {
     "name": "ipvis",
     "version": "1.0.0",
-    "description": "",
+    "description": "Copy internal/external IP to your clipboard",
     "main": "index.js",
     "scripts": {
         "start": "electron .",
@@ -12,8 +12,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "clipboardy": "^2.1.0",
         "ip": "^1.1.5",
+        "node-clip": "^0.1.1",
         "public-ip": "^4.0.0"
     },
     "devDependencies": {

@@ -3,7 +3,7 @@ const { app, Tray, Menu } = electron;
 const path = require('path');
 const ip = require('ip');
 const publicIp = require('public-ip');
-const ncp = require('clipboardy');
+const ncp = require('node-clip')();
 const iconPath = path.join(__dirname, 'iconTemplate@3x.png');
 let appIcon = null;
 
@@ -13,13 +13,13 @@ app.on('ready', () => {
         let contextMenu = Menu.buildFromTemplate([{
                 label: "Copy WLAN: " + ip.address("public"),
                 click: function () {
-                    ncp.writeSync(ip.address("public"));
+                    ncp.writeAll(ip.address("public"), () => {});
                 }
             },
             {
                 label: `Copy Public: ${eip}`,
                 click: function () {
-                    ncp.writeSync(eip);
+                    ncp.writeAll(eip, () => {});
                 }
             },
             {
