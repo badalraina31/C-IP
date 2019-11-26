@@ -1,37 +1,25 @@
 const electron = require('electron');
-const {
-    app,
-    Tray,
-    Menu,
-    BrowserWindow
-} = electron;
+const { app, Tray, Menu } = electron;
 const path = require('path');
-const iconPath = path.join(__dirname, 'iconTemplate@3x.png');
-let appIcon = null;
-let win = null;
-
 const ip = require('ip');
 const publicIp = require('public-ip');
-var ExternalIP;
-var ncp = require('clipboardy');
+const ncp = require('clipboardy');
+const iconPath = path.join(__dirname, 'iconTemplate@3x.png');
+let appIcon = null;
 
 app.on('ready', () => {
     publicIp.v4().then(eip => {
-        ExternalIP = eip;
-        win = new BrowserWindow({
-            show: false
-        });
         appIcon = new Tray(iconPath);
-        var contextMenu = Menu.buildFromTemplate([{
+        let contextMenu = Menu.buildFromTemplate([{
                 label: "Copy WLAN: " + ip.address("public"),
                 click: function () {
                     ncp.writeSync(ip.address("public"));
                 }
             },
             {
-                label: "Copy Public: " + ExternalIP,
+                label: `Copy Public: ${eip}`,
                 click: function () {
-                    ncp.writeSync(ExternalIP);
+                    ncp.writeSync(eip);
                 }
             },
             {
@@ -50,8 +38,9 @@ app.on('ready', () => {
         appIcon.setToolTip('View your IP information');
         appIcon.setContextMenu(contextMenu);
     });
-})
+});
+
 app.on('quit', () => {
     app.quit();
     app.exit();
-})
+});
