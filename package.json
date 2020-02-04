@@ -17,7 +17,7 @@
         "public-ip": "^4.0.0"
     },
     "devDependencies": {
-        "electron": "^7.1.11",
+        "electron": "^8.0.0",
         "electron-builder": "^22.3.2",
         "electron-toolkit": "^1.0.24"
     },
